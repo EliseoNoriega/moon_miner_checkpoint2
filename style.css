@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'deltatext';
+    src: url(fonts/8bitOperatorPlus-Regular.tff);
+}
+
+
+.spamton {
+    margin-top: 11em;
+}
+
+.pipis {
+    max-width: 2em;
+}
+
+body {
+    background-image: url(https://www.spriters-resource.com/media/asset_icons/172/175637.gif);
+}
+
+.text {
+    color: white;
+    font-family: 'deltatext'
+}
