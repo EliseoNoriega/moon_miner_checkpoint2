@@ -13,12 +13,14 @@
 
 <body>
 
+    <!-- contains the main info spot like the amount of pipis you have, spamton, and pipis gains -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column">
 
                 <div class="d-flex">
 
+                    <!-- Shows you how many Pipis you have at the top of your screen. -->
                     <p>
                         <img class="pipis"
                             src="https://imgs.search.brave.com/xvft45ByL4UHohOBVVd44BDG-lCD4hhBGVQhDs6XAHs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS50ZW5vci5jb20v/dXVyajYxcG1DeVlB/QUFBai9waXBpcy1k/ZWx0YXJ1bmUuZ2lm.gif"
@@ -31,19 +33,31 @@
                     </p>
                 </div>
 
+                <!-- The little dancing guy -->
                 <img class="spamton" onclick=mine()
                     src="https://imgs.search.brave.com/iWZpa0xN-NiJqJ2p1Xvje7qAZehdsC8B9myOXCDx5fE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHJp/bmdzYXR0YWNoZWQu/bmVvY2l0aWVzLm9y/Zy9pbWcvc3ByaXRl/cy9zcGFtdG9uX292/ZXJ3b3JsZC9zcGFt/dG9uX2p1bXAuZ2lm.gif"
                     alt="">
+
+                <!-- What you gain per click -->
+                <p id="gain" class="text">
+                    Pipis gained per click: 1
+                </p>
+                <!-- What you gain per time interval. It varies with upgrades -->
+                <p id="time-gain" class="text">
+                    Pipis gained every 3 seconds: 0
+                </p>
+
             </div>
         </div>
     </div>
 
-
+    <!-- This part is where all the elements for the upgrades go. -->
     <div class="container-fluid pt-5">
 
         <div class="row justify-content-center">
 
-            <div class="col-4 pt-3 d-flex justify-content-center align-items-center  flex-column">
+            <!-- Moss upgrades -->
+            <div class="col-4  d-flex justify-content-center align-items-center  flex-column">
 
                 <p id="moss-quantity" class="text">
                     Moss: 0
@@ -59,13 +73,14 @@
 
             </div>
 
-            <div class="col-4 pt-3 d-flex  justify-content-center align-items-center flex-column">
+            <div class="col-4 d-flex  justify-content-center align-items-center flex-column">
 
+                <!-- Thorn ring upgrades -->
                 <p id="Thorn-quantity" class="text">
                     Thorn Ring: 0
                 </p>
 
-                <button>
+                <button onclick="buyThornring()">
                     Buy!
                 </button>
 
@@ -86,12 +101,13 @@
 
             <div class="col-4 pt-3 align-items-center justify-content-center d-flex flex-column">
 
+                <!-- Deal maker upgrades -->
                 <p id="Dealmakers-quantity" class="text">
 
-                    Dealmakers
+                    Dealmakers: 0
                 </p>
 
-                <button>
+                <button onclick=buyDealmakers()>
                     Buy!
                 </button>
 
@@ -105,17 +121,18 @@
 
             <div class="col-4 pt-3 align-items-center justify-content-center d-flex flex-column">
 
-                <p class="text">
+                <!-- Hyperlink blocked upgrades -->
+                <p id="Hyper-quantity" class="text">
 
-                    [[HyperlinkBlocked]]
+                    [[HyperlinkBlocked]]:0
 
                 </p>
 
-                <button>
+                <button onclick="buyHyper()">
                     Buy!
                 </button>
 
-                <p class="text pt-3">
+                <p id="Hyper-price" class="text pt-3">
 
                     price: 35
 
